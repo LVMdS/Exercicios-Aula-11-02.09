@@ -7,4 +7,4 @@ resposta = input("Sua resposta: ")
 if resposta.lower() == resposta_correta.lower():
     print("Correto!")
 else:
-    print("Errado! A resposta correta é Brasília.")
+    print(f"Errado! A resposta correta é {resposta_correta}")
