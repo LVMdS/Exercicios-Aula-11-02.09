@@ -1,10 +1,18 @@
 import unicodedata
+import time
 
 # Função para remover acentos
 def remover_acentos(texto):
     nfkd = unicodedata.normalize('NFKD', texto)
     texto_sem_acento = "".join([c for c in nfkd if not unicodedata.combining(c)])
     return texto_sem_acento
+
+print('''
+      Bem vindo! 
+      Vamos lá para nosso Quiz?!
+      ''')
+
+time.sleep(2)
 
 quiz = [
     {"pergunta": "Qual é a capital da França?", "resposta": "Paris"},
@@ -32,6 +40,8 @@ def executar_quiz():
             print() 
         
         print(f"Fim do jogo! Você acertou {score} de {len(quiz)} perguntas.")
+        
+        print() 
     
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
